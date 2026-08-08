@@ -94,7 +94,6 @@ export interface RelayConversation {
 export interface PostMessageBody {
   conversation_id: string;
   parts: Array<Record<string, unknown>>;
-  suggestions?: Array<{ text: string }>;
   reply_to?: { message_id: string; part_index?: number };
   /**
    * Required in a group: the id Relay supplied on the invocation this message

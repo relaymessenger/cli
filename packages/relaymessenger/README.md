@@ -69,7 +69,7 @@ curl -X POST https://api.relayapp.im/v1/messages \
   an ACP coding-engine preset.
 - **Approvals**: an engine `session/request_permission` becomes a Relay
   message with a text part plus an `agent_permission_request` data part
-  (origin-tagged Allow/Deny options and quick-reply chips). Tap a chip or text
+  (origin-tagged Allow/Deny options). Tap an option or text
   `yes <id>` / `no <id>`. The full security-relevant tool input and affected
   paths must fit in the card; an operation that cannot be represented in full
   is denied instead of shown partially. No answer within 10 minutes → deny.

@@ -178,7 +178,6 @@ export function buildPermissionCard(input: PermissionCardInput): {
   body: {
     conversation_id: string;
     parts: Array<Record<string, unknown>>;
-    suggestions: Array<{ text: string }>;
   };
   idempotencyKey: string;
 } {
@@ -213,8 +212,6 @@ export function buildPermissionCard(input: PermissionCardInput): {
           },
         },
       ],
-      // Chip text IS the sent text, so the chips carry the parseable fallback.
-      suggestions: [{ text: `yes ${id}` }, { text: `no ${id}` }],
     },
     idempotencyKey: `agent-perm-${id}`,
   };

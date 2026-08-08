@@ -519,10 +519,6 @@ test("permission card reply is consumed by the broker, not forwarded to the engi
     kind: "agent_permission_request",
     request_id: requestId,
   });
-  assert.deepEqual(card!.body.suggestions, [
-    { text: `yes ${requestId}` },
-    { text: `no ${requestId}` },
-  ]);
 
   // Phone taps Allow → text fallback reply "yes <id>".
   const tap = userMessageEvent("evt_tap", "cnv_a", `yes ${requestId}`, 3);
